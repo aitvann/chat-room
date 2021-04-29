@@ -1,0 +1,23 @@
+[package]
+name = "chat-room-server"
+version = "0.1.0"
+authors = ["Aitzhanov Ivan <aitvann@gmail.com>"]
+edition = "2018"
+
+# See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
+
+[dependencies]
+tokio = { version = "1.5", features = ["rt-multi-thread", "net", "io-util", "sync", "macros"] }
+tokio-util = { version = "0.6", features = ["codec"] }
+tokio-serde = { version = "0.8", features = ["json"] }
+futures = "0.3"
+
+serde = { version = "1.0", features = ["derive"] }
+
+log = "0.4"
+pretty_env_logger = "0.4.0"
+
+jemalloc-ctl = "0.3"
+jemallocator = "0.3"
+
+structopt = "0.3"
